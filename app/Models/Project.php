@@ -14,6 +14,7 @@ class Project extends Model
         'name',
         'slug',
         'url',
+        'techstack',
         'description',
         'year',
         'meta_title',

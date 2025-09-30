@@ -38,6 +38,7 @@ class ProjectController extends Controller
         $request->validate([
             'name'              => 'required|string|max:100',
             'url'               => 'nullable|string|max:100',
+            'techstack'         => 'nullable|string|max:100',
             'description'       => 'required|string',
             'year'              => 'required|digits:4|integer',
             'images'            => 'required|array',
@@ -55,6 +56,7 @@ class ProjectController extends Controller
             'name'              => $request->name,
             'slug'              => $slug,
             'url'               => $request->url,
+            'techstack'         => $request->techstack,
             'description'       => $request->description,
             'year'              => $request->year,
             'meta_title'        => $request->meta_title,
@@ -109,6 +111,7 @@ class ProjectController extends Controller
         $request->validate([
             'name'              => 'required|string|max:100',
             'url'               => 'nullable|string|max:100',
+            'techstack'         => 'nullable|string|max:100',
             'description'       => 'required|string',
             'year'              => 'required|digits:4|integer',
             'images.*'          => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -126,6 +129,7 @@ class ProjectController extends Controller
             'name'              => $request->name,
             'slug'              => $newSlug,
             'url'               => $request->url,
+            'techstack'         => $request->techstack,
             'description'       => $request->description,
             'year'              => $request->year,
             'meta_title'        => $request->meta_title,

@@ -65,6 +65,11 @@
                   <input type="text" name="url" class="form-control"
                          value="{{ old('url', $project->url) }}" required>
                 </div>
+                <div class="mb-3">
+                  <label for="url" class="form-label">techstack</label>
+                  <input type="text" name="techstack" class="form-control"
+                         value="{{ old('techstack', $project->techstack) }}" required>
+                </div>
 
                 <div class="mb-3">
                     <label for="year" class="form-label">Year</label>

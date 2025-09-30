@@ -52,6 +52,12 @@
                     <span>Services</span>
                 </a>
             </li><!-- End Profile Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('testimonials.index')}}">
+                    <i class="bi bi-circle"></i>
+                    <span>Tetimonials</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
 
         </ul>
       </li>

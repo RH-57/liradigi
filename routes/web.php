@@ -8,12 +8,17 @@ use App\Http\Controllers\Admin\PostCategoryController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Web\DashboardController as WebDashboardController;
+use App\Http\Controllers\Web\MessageController;
+use App\Http\Controllers\Web\ProjectController as WebProjectController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WebDashboardController::class, 'index'])->name('home');
+Route::get('/projects', [WebProjectController::class, 'index'])->name('project');
+Route::get('/projects/{slug}', [WebProjectController::class, 'show'])->name('project.show');
+Route::post('/messages', [MessageController::class, 'store'])->name('message.store');
 
 Route::get('/manage', [AuthController::class, 'showLoginForm'])->name('manage');
 Route::post('/manage', [AuthController::class, 'login'])->name('manage.attempt')->middleware('throttle:login');
@@ -26,6 +31,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('/users', UserController::class);
     Route::resource('/settings/mediasocial', MediaSocialController::class);
     Route::resource('/services', ServiceController::class);
+    Route::resource('/testimonials', TestimonialController::class);
     Route::resource('/projects', ProjectController::class);
     Route::delete('/projects/images/{id}', [ProjectController::class, 'deleteImage'])->name('projects.images.delete');
     Route::resource('/posts', PostController::class);

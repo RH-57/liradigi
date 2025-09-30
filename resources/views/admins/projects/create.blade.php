@@ -80,6 +80,13 @@
                     @error('url') <small class="text-danger">{{ $message }}</small> @enderror
                   </div>
                 </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Tech Stack</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="techstack" value="{{ old('techstack') }}" class="form-control" required>
+                    @error('techstack') <small class="text-danger">{{ $message }}</small> @enderror
+                  </div>
+                </div>
 
                 <div class="row mb-3">
                     <label class="col-sm-2 col-form-label">Year</label>

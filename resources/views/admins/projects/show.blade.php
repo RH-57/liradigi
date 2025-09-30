@@ -79,19 +79,23 @@
                     <div class="tab-pane fade show active" id="project-info">
                         <h5 class="card-title">Content</h5>
                         <div class="row mb-3">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <strong>Name</strong>
                                 <p>{{ $project->name }}</p>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <strong>URL</strong><br />
                                 <p><a href="{{$project->url}}">{{$project->url}}</a></p>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <strong>Year</strong>
                                 <p>{{$project->year}}</p>
+                            </div>
+                            <div class="col-md-3">
+                                <strong>Tech Stack</strong>
+                                <p>{{$project->techstack}}</p>
                             </div>
                         </div>
 
@@ -111,29 +115,29 @@
                     <div class="tab-pane fade" id="project-seo">
                         <h5 class="card-title">SEO Information</h5>
                         <div class="row mb-3">
-                        <div class="col-md-4">
-                            <strong>Meta Title</strong>
-                            <p>{{ $project->meta_title }}</p>
-                        </div>
-                        <div class="col-md-4">
-                            <strong>Meta Keyword</strong>
-                            <p>{{ $project->meta_keyword }}</p>
-                        </div>
-                        <div class="col-md-4">
-                            <strong>Meta Description</strong>
-                            <p>{{ $project->meta_description }}</p>
-                        </div>
+                            <div class="col-md-4">
+                                <strong>Meta Title</strong>
+                                <p>{{ $project->meta_title }}</p>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Meta Keyword</strong>
+                                <p>{{ $project->meta_keyword }}</p>
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Meta Description</strong>
+                                <p>{{ $project->meta_description }}</p>
+                            </div>
                         </div>
 
                         <div class="row mb-3">
-                        <div class="col-md-12">
-                            <strong>Canonical URL</strong>
-                            <p>
-                            <a href="{{ $project->canonical_url }}" target="_blank">
-                                {{ $project->canonical_url }}
-                            </a>
-                            </p>
-                        </div>
+                            <div class="col-md-12">
+                                <strong>Canonical URL</strong>
+                                <p>
+                                <a href="{{ $project->canonical_url }}" target="_blank">
+                                    {{ $project->canonical_url }}
+                                </a>
+                                </p>
+                            </div>
                         </div>
                     </div><!-- End SEO Tab -->
 

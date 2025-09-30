@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Contact;
 use App\Models\MediaSocial;
+use App\Models\Project;
 use App\Models\social_media;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,7 @@ class ContactController
     public function index() {
         $contacts = Contact::first();
         $mediasocials = MediaSocial::all();
+
         return view('admins.settings.contact.index', compact('contacts', 'mediasocials'));
     }
 
