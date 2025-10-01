@@ -14,7 +14,7 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-1">
+            <a href="{{route('home')}}" class="flex items-center gap-1">
                 <img src="{{ asset('assets/web/img/logo.png') }}"
                     alt="Logo"
                     class="w-10 h-10 object-contain">
