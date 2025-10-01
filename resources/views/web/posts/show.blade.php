@@ -41,37 +41,43 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-8">
-        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-700 dark:text-slate-200 transition group">Home
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px]
+        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-700 dark:text-slate-200 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Home
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                 transition-all duration-200 group-hover:w-full">
             </span>
         </a>
-        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 transition group">Services
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px]
+        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Services
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                 transition-all duration-200 group-hover:w-full">
             </span>
         </a>
-        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 transition group">Projects
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px]
+        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Projects
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                 transition-all duration-200 group-hover:w-full">
             </span>
         </a>
-        <a href="{{route('posts')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 transition group">Posts
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px]
+        <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Testimonials
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                 transition-all duration-200 group-hover:w-full">
             </span>
         </a>
-        <a href="#contact" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 transition group">Contact
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px]
+        <a href="{{route('posts')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                 transition-all duration-200 group-hover:w-full">
             </span>
         </a>
-      </nav>
+        <a href="#contact" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Contact
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px]
+                bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
+                transition-all duration-200 group-hover:w-full">
+            </span>
+        </a>
+    </nav>
 
       <div class="flex items-center gap-3">
             <!-- Get Started button (desktop only) -->
