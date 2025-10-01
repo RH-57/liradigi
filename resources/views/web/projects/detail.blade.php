@@ -11,7 +11,7 @@
   <link rel="canonical" href="{{url()->current()}}">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="{{ $project->meta_name }} - Liradigi">
+  <meta property="og:title" content="{{ $project->meta_title }} - Liradigi">
   <meta property="og:description" content="{{ $project->meta_description }}">
   <meta property="og:url" content="{{ url()->current() }}">
   <meta property="og:type" content="website">
@@ -47,13 +47,13 @@
             </a>
 
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#home" class="text-lg font-bold relative text-slate-700 dark:text-slate-200 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Home
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-700 dark:text-slate-200 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Home
                     <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#services" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Services
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Services
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
@@ -65,7 +65,7 @@
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#testimonials" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Testimonials
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Testimonials
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
@@ -106,7 +106,7 @@
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Services</a>
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Projects</a>
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Testimonials</a>
-                <a href="#blogs" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
+                <a href="{{ route('posts') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Contact</a>
             </div>
         </div>

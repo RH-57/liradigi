@@ -12,7 +12,7 @@
   <link rel="canonical" href="{{url()->current()}}">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="{{ $post->meta_name }} - Liradigi">
+  <meta property="og:title" content="{{ $post->meta_title}} - Liradigi">
   <meta property="og:description" content="{{ $post->meta_description }}">
   <meta property="og:url" content="{{ url()->current() }}">
   <meta property="og:type" content="website">
@@ -87,14 +87,14 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden fixed top-[64px] left-0 right-0 z-40 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm">
+    <div id="mobile-menu" class="hidden md:hidden fixed top-[64px] left-0 right-0 z-40 bg-white/70 dark:bg-slate-900/70">
       <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
         <a href="{{ route('home') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Home</a>
-        <a href="#services" class="text-slate-700 dark:text-slate-200 font-medium py-2">Services</a>
-        <a href="#projects" class="text-slate-700 dark:text-slate-200 font-medium py-2">Projects</a>
-        <a href="#testimonials" class="text-slate-700 dark:text-slate-200 font-medium py-2">Testimonials</a>
-        <a href="{{ route('posts') ?? '#' }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
-        <a href="#contact" class="text-slate-700 dark:text-slate-200 font-medium py-2">Contact</a>
+        <a href="{{ route('home') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Services</a>
+        <a href="{{ route('home') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Projects</a>
+        <a href="{{ route('home') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Testimonials</a>
+        <a href="{{ route('posts') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
+        <a href="{{ route('home') }}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Contact</a>
       </div>
     </div>
   </header>

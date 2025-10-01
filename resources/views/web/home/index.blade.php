@@ -18,7 +18,7 @@
   <body class="overflow-x-hidden">
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-1">
+            <a href="{{route('home')}}" class="flex items-center gap-1">
                 <img src="{{ asset('assets/web/img/logo.png') }}"
                     alt="Logo"
                     class="w-10 h-10 object-contain">
@@ -106,13 +106,13 @@
         <!-- Mobile menu -->
         <div id="mobile-menu"
             class="hidden md:hidden fixed top-[64px] left-0 right-0 z-40
-                    bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm">
+                    bg-white/70 dark:bg-slate-900/70">
             <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
                 <a href="#home" class="text-slate-700 dark:text-slate-200 font-medium py-2">Home</a>
                 <a href="#services" class="text-slate-700 dark:text-slate-200 font-medium py-2">Services</a>
                 <a href="#projects" class="text-slate-700 dark:text-slate-200 font-medium py-2">Projects</a>
                 <a href="#testimonials" class="text-slate-700 dark:text-slate-200 font-medium py-2">Testimonials</a>
-                <a href="#blogs" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
+                <a href="{{route('posts')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
                 <a href="#contact" class="text-slate-700 dark:text-slate-200 font-medium py-2">Contact</a>
             </div>
         </div>
