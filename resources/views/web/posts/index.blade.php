@@ -23,31 +23,31 @@
             </a>
 
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#home" class="text-lg font-bold relative text-slate-700 dark:text-slate-200 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Home
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-700 dark:text-slate-200 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Home
                     <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#services" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Services
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Services
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#projects" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Projects
+                <a href="{{route('projects')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Projects
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#testimonials" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Testimonials
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Testimonials
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#blogs" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
+                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
@@ -140,7 +140,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div id="contacts" class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Info -->
                 <div class="space-y-3">
                     <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Kontak Kami</h3>

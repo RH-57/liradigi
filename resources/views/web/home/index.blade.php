@@ -21,7 +21,8 @@
             <a href="{{route('home')}}" class="flex items-center gap-1">
                 <img src="{{ asset('assets/web/img/logo.png') }}"
                     alt="Logo"
-                    class="w-10 h-10 object-contain">
+                    class="w-10 h-10 object-contain"
+                    loading="lazy">
 
 
                 <span class="text-2xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight shadow-2xl">LIRADIGI.</span>
@@ -170,17 +171,19 @@
             </div>
 
             <!-- Image / Illustration -->
-            <div class="flex-1 relative lg:block">
+            <div class="hidden flex-1 relative lg:block">
                 <div class="w-full max-w-2xl mx-auto lg:mx-0 relative z-10">
                     <!-- Laptop -->
                     <img src="{{ asset('assets/web/img/hero.png') }}"
                         alt="Laptop"
-                        class="w-full drop-shadow-2xl animate-float">
+                        class="w-full drop-shadow-2xl animate-float"
+                        loading="lazy">
 
                     <!-- Smartphone (posisi di depan laptop, kanan bawah) -->
                     <img src="{{ asset('assets/web/img/hero-smartphone.png') }}"
                         alt="Smartphone"
-                        class="absolute top-10 left-10 w-40 drop-shadow-2xl animate-float-slow z-20 translate-y-4">
+                        class="absolute top-10 left-10 w-40 drop-shadow-2xl animate-float-slow z-20 translate-y-4"
+                        loading="lazy">
 
                 </div>
 
@@ -279,7 +282,8 @@
                         ? asset('storage/' . optional($project->images->first())->image)
                         : asset('assets/web/img/default.png') }}"
                     alt="{{$project->name}}"
-                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
                     <div class="absolute bottom-6 left-6 text-white">
                         <h3 class="text-xl font-bold">{{$project->name}}</h3>
