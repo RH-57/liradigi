@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function index() {
         $contacts = Contact::first();
         $medsos = MediaSocial::get();
-        $projects = Project::with('images')->get()->take(3);
+        $projects = Project::with('images')->limit(3)->get();
         $testimonials = Testimonial::latest()->take(5)->get();
         $services = Service::get();
 

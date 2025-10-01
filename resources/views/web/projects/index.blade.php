@@ -111,13 +111,15 @@
             @foreach($projects as $project)
             <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-white dark:bg-slate-800
                         transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                <img src="{{asset('storage/' . $project->images->first()->image)}}"
+                <img src="{{ optional($project->images->first())->image
+                        ? asset('storage/' . optional($project->images->first())->image)
+                        : asset('assets/web/img/default.png') }}"
                     alt="{{$project->name}}"
                     class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition">
                     <div class="absolute bottom-6 left-6 right-6 text-white">
                         <h3 class="text-xl font-bold">{{$project->name}}</h3>
-                        <p class="text-sm text-slate-200 line-clamp-3">{!! Purify::clean($project->description) !!}</p>
+                        <p class="text-sm text-slate-200 line-clamp-3">{!! Str::limit(strip_tags(Purify::clean($project->description)), 120) !!}</p>
                         <a href="{{route('project.show', $project->slug)}}"
                         class="mt-3 inline-block px-4 py-2 rounded-md bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white font-semibold shadow hover:shadow-lg hover:scale-105 transition">
                         Lihat Detail

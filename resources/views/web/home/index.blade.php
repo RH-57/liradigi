@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
+
+    <title>LIRADIGI | Partner Digital Untuk Bisnis Anda</title>
+    <meta name="description" content="Kami membantu brand dan bisnis Anda tumbuh dengan teknologi digital, desain modern, dan strategi tepat sasaran.">
+    <meta name="keywords" content="digital marketing, jasa website, branding, teknologi, SEO, desain grafis, aplikasi web">
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
@@ -47,7 +52,7 @@
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="#blogs" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
+                <a href="{{route('posts')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
@@ -63,12 +68,35 @@
 
 
             <div class="flex items-center gap-3">
-                <!-- Get Started button (desktop only) -->
-                <a href="https://wa.me/{{$contacts->phone}}?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank" class="hidden lg:inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white text-xl font-semibold shadow-md hover:shadow-lg hover:scale-105 transform transition">
+                <a href="#get-started"
+                    class="hidden md:flex group relative items-center justify-center px-6 py-3 rounded-lg
+                        bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
+                        text-white text-xl font-semibold shadow-md overflow-hidden
+                        transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
 
+                    <!-- Teks -->
+                    <span
+                    class="transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
                     Konsultasi Gratis
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </span>
+
+                    <!-- Icon WhatsApp -->
+                    <i
+                    class="fa-brands fa-whatsapp text-4xl absolute opacity-0 translate-x-full
+                            transition-all duration-500 ease-in-out
+                            group-hover:translate-x-0 group-hover:opacity-100
+                            group-hover:text-white">
+                    </i>
+
+                    <!-- Efek sinar -->
+                    <span
+                    class="absolute inset-0 bg-white rounded-lg opacity-0 scale-0
+                            group-hover:opacity-30 group-hover:scale-150 blur-2xl
+                            transition-all duration-700 ease-out">
+                    </span>
                 </a>
+                </div>
+
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
@@ -102,21 +130,47 @@
                     Partner Digital Untuk <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Bisnis Anda</span>
                 </h1>
                 <p class="mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0">
-                    Kami membantu brand dan bisnis Anda tumbuh dengan teknologi digital terbaru, desain modern, dan strategi tepat sasaran.
+                    Kami menyediakan layanan Pembuatan Website untuk bisnis anda dan membantu bisnis Anda tumbuh dengan teknologi digital terbaru, desain modern, aman, dan strategi tepat sasaran.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#get-started" class="px-6 py-3 rounded-lg bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white text-xl font-semibold font-xl shadow-md hover:shadow-lg hover:scale-105 transform transition">
-                    Konsultasi Gratis
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <a href="#get-started"
+                    class="group relative flex items-center justify-center px-6 py-3 rounded-lg
+                        bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
+                        text-white text-xl font-semibold shadow-md overflow-hidden
+                        transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
+
+                        <!-- Teks -->
+                        <span
+                        class="transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
+                        Konsultasi Gratis
+                        </span>
+
+                        <!-- Icon WhatsApp -->
+                        <i
+                        class="fa-brands fa-whatsapp text-4xl absolute opacity-0 translate-x-full
+                                transition-all duration-500 ease-in-out
+                                group-hover:translate-x-0 group-hover:opacity-100
+                                group-hover:text-white">
+                        </i>
+
+                        <!-- Efek sinar -->
+                        <span
+                        class="absolute inset-0 bg-white rounded-lg opacity-0 scale-0
+                                group-hover:opacity-30 group-hover:scale-150 blur-2xl
+                                transition-all duration-700 ease-out">
+                        </span>
                     </a>
-                    <a href="#projects" class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-                    Lihat Projects
+                    <a href="#projects"
+                        class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700
+                         text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-100
+                          dark:hover:bg-slate-800 transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
+                    Lihat Project
                     </a>
                 </div>
             </div>
 
             <!-- Image / Illustration -->
-            <div class="flex-1 relative hidden lg:block">
+            <div class="flex-1 relative lg:block">
                 <div class="w-full max-w-2xl mx-auto lg:mx-0 relative z-10">
                     <!-- Laptop -->
                     <img src="{{ asset('assets/web/img/hero.png') }}"
@@ -126,7 +180,7 @@
                     <!-- Smartphone (posisi di depan laptop, kanan bawah) -->
                     <img src="{{ asset('assets/web/img/hero-smartphone.png') }}"
                         alt="Smartphone"
-                        class="absolute bottom-20 right-10 w-40 drop-shadow-2xl rotate-3 animate-float-slow z-20 translate-y-4">
+                        class="absolute top-10 left-10 w-40 drop-shadow-2xl animate-float-slow z-20 translate-y-4">
 
                 </div>
 
@@ -145,10 +199,10 @@
         </div>
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">
-            What We <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Offer</span>
+            Kami Mempercepat <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Pertumbuhan Bisnis </span>Anda
             </h2>
             <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
-            Layanan digital inovatif untuk membawa bisnismu ke level berikutnya.
+            Dengan Layanan yang Kami berikan, dapat membantu mempercepat pertumbuhan bisnis anda naik ke level berikutnya.
             </p>
 
             <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -166,6 +220,36 @@
                 @endforeach
 
             </div>
+            <div class="mt-16 flex flex-col sm:flex-row gap-4 justify-center lg:justify-center">
+                <a href="#get-started"
+                    class="group relative flex items-center justify-center px-6 py-3 rounded-lg
+                        bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
+                        text-white text-xl font-semibold shadow-md overflow-hidden
+                        transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
+
+                    <!-- Teks -->
+                    <span
+                    class="transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
+                    Konsultasi Gratis
+                    </span>
+
+                    <!-- Icon WhatsApp -->
+                    <i
+                    class="fa-brands fa-whatsapp text-4xl absolute opacity-0 translate-x-full
+                            transition-all duration-500 ease-in-out
+                            group-hover:translate-x-0 group-hover:opacity-100
+                            group-hover:text-white">
+                    </i>
+
+                    <!-- Efek sinar -->
+                    <span
+                    class="absolute inset-0 bg-white rounded-lg opacity-0 scale-0
+                            group-hover:opacity-30 group-hover:scale-150 blur-2xl
+                            transition-all duration-700 ease-out">
+                    </span>
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -191,7 +275,10 @@
                 @foreach($projects as $project)
                 <!-- Project Card -->
                 <div class="group relative overflow-hidden rounded-2xl shadow-xl bg-white dark:bg-slate-800">
-                    <img src="{{asset('storage/' . $project->images->first()->image)}}" alt="Project 1"
+                    <img src="{{ optional($project->images->first())->image
+                        ? asset('storage/' . optional($project->images->first())->image)
+                        : asset('assets/web/img/default.png') }}"
+                    alt="{{$project->name}}"
                     class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
                     <div class="absolute bottom-6 left-6 text-white">

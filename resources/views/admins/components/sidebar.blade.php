@@ -68,7 +68,7 @@
         </a>
         <ul id="post-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li class="nav-item">
-            <a class="nav-link collapsed" href="{{route('posts.categories.index')}}">
+            <a class="nav-link collapsed" href="{{ route('posts.categories.index') }}">
                 <i class="bi bi-circle"></i>
                 <span>Categories</span>
             </a>

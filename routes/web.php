@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Web\DashboardController as WebDashboardController;
 use App\Http\Controllers\Web\MessageController;
+use App\Http\Controllers\Web\PostController as WebPostController;
 use App\Http\Controllers\Web\ProjectController as WebProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,8 @@ Route::get('/', [WebDashboardController::class, 'index'])->name('home');
 Route::get('/projects', [WebProjectController::class, 'index'])->name('project');
 Route::get('/projects/{slug}', [WebProjectController::class, 'show'])->name('project.show');
 Route::post('/messages', [MessageController::class, 'store'])->name('message.store');
+Route::get('/posts', [WebPostController::class, 'index'])->name('posts');
+Route::get('/posts/{slug}', [WebPostController::class, 'show'])->name('web.posts.show');
 
 Route::get('/manage', [AuthController::class, 'showLoginForm'])->name('manage');
 Route::post('/manage', [AuthController::class, 'login'])->name('manage.attempt')->middleware('throttle:login');
@@ -34,9 +37,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('/testimonials', TestimonialController::class);
     Route::resource('/projects', ProjectController::class);
     Route::delete('/projects/images/{id}', [ProjectController::class, 'deleteImage'])->name('projects.images.delete');
+    Route::prefix('posts')->name('posts.')->group(function () {
+        Route::resource('categories', PostCategoryController::class);
+    });
     Route::resource('/posts', PostController::class);
     Route::post('/posts/upload-image', [PostController::class, 'uploadImage'])->name('posts.uploadImage');
-    Route::prefix('posts')->name('posts.')->group(function () {
-        route::resource('categories', PostCategoryController::class);
-    });
+
 });

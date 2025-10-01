@@ -194,6 +194,7 @@
         Link,
         ImageStyle,
         ImageResize,
+        Heading,
     } from 'ckeditor5';
 
     ClassicEditor
@@ -202,10 +203,11 @@
             plugins: [
                 Essentials, Paragraph, Bold, Italic, Font,
                 Image, ImageToolbar, ImageUpload, ImageInsert, ImageResize, CKFinderUploadAdapter,
-                List, Link, ImageStyle
+                List, Link, ImageStyle, Heading
             ],
             toolbar: [
                 'undo', 'redo', '|',
+                'heading', '|',
                 'bold', 'italic', '|',
                 'link', '|',
                 'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
