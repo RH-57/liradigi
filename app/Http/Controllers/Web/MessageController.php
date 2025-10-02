@@ -28,8 +28,9 @@ class MessageController extends Controller
 
         $result = $response->json();
 
-        if (!($result['success'] ?? false)) {
-            return back()->withErrors(['captcha' => 'Verifikasi reCAPTCHA gagal, coba lagi.']);
+
+        if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
+            return back()->withErrors(['g-recaptcha-response' => 'Verifikasi reCAPTCHA gagal, coba lagi.'])->withInput();
         }
 
         Message::create([
