@@ -168,24 +168,24 @@
 
       <!-- RIGHT: Project Gallery -->
       <div class="max-w-5xl mx-auto">
-  <!-- Foto Besar -->
-  <div class="mb-4">
-    <img id="mainImage" src="{{ optional($project)->image
-                        ? asset('storage/projects/' . $project->image)
-                        : asset('assets/web/img/default.png') }}"
-                        alt="{{$project->name}}"
-      class="w-full h-72 object-cover rounded-xl shadow-lg transition">
-  </div>
+        <!-- Foto Besar -->
+        <div class="mb-4">
+            <img id="mainImage" src="{{ optional($project)->images->first()
+                                ? asset('storage/' . $project->images->first()->image)
+                                : asset('assets/web/img/default.png') }}"
+                                alt="{{$project->name}}"
+            class="w-full h-72 object-cover rounded-xl shadow-lg transition">
+        </div>
 
-  <!-- Grid Foto Kecil -->
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-    @foreach($project->images as $image)
-      <img src="{{ asset('storage/' . $image->image) }}"
-        alt="Thumbnail"
-        class="thumbnail cursor-pointer h-20 w-full object-cover rounded-lg shadow-md hover:opacity-80 transition">
-    @endforeach
-  </div>
-</div>
+        <!-- Grid Foto Kecil -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            @foreach($project->images as $image)
+            <img src="{{ asset('storage/' . $image->image) }}"
+                alt="Thumbnail"
+                class="thumbnail cursor-pointer h-20 w-full object-cover rounded-lg shadow-md hover:opacity-80 transition">
+            @endforeach
+        </div>
+    </div>
 
     </div>
   </div>
@@ -313,5 +313,22 @@
     </a>
 
   <script src="{{asset('assets/web/js/app.js')}}"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mainImage = document.getElementById("mainImage");
+        const thumbnails = document.querySelectorAll(".thumbnail");
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener("click", function () {
+                // Ganti src gambar utama dengan src thumbnail yang diklik
+                mainImage.src = this.src;
+
+                // Optional: kasih efek highlight di thumbnail yang aktif
+                thumbnails.forEach(t => t.classList.remove("ring-4", "ring-emerald-500"));
+                this.classList.add("ring-4", "ring-emerald-500");
+            });
+        });
+    });
+    </script>
 </body>
 </html>

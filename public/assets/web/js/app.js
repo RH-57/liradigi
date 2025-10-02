@@ -65,3 +65,21 @@ const sections = document.querySelectorAll("section[id]");
   }
 
   window.addEventListener("scroll", setActiveLink);
+
+
+//image project
+document.addEventListener("DOMContentLoaded", function () {
+    const mainImage = document.getElementById("mainImage");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", function () {
+            // Ganti src gambar utama dengan src thumbnail yang diklik
+            mainImage.src = this.src;
+
+            // Optional: kasih efek highlight di thumbnail yang aktif
+            thumbnails.forEach(t => t.classList.remove("ring-4", "ring-emerald-500"));
+            this.classList.add("ring-4", "ring-emerald-500");
+        });
+    });
+});
