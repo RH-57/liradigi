@@ -302,15 +302,6 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
-        target="_blank"
-        class="group fixed bottom-6 right-1 z-50 w-16 h-16 rounded-full
-                bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400
-                flex items-center justify-center text-white text-3xl shadow-lg
-                hover:scale-110 hover:shadow-2xl transition-all duration-300">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
 
   <script src="{{asset('assets/web/js/app.js')}}"></script>
   <script>
