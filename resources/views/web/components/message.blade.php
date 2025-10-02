@@ -65,12 +65,8 @@
                             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Pesan</label>
                             <textarea name="message" rows="5" class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" required></textarea>
                         </div>
-                        {{-- Wrapper untuk reCAPTCHA --}}
-                        <div class="flex justify-center">
-                            <div class="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 shadow-inner border border-slate-200 dark:border-slate-700">
-                                <div class="g-recaptcha" data-sitekey="{{config('services.recaptcha.site_key')}}"></div>
-                            </div>
-                        </div>
+
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
                         @error('g-recaptcha-response')
                             <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
@@ -78,6 +74,13 @@
                         <button type="submit" class="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transform transition">
                             Kirim Pesan
                         </button>
+                        <p class="mt-4 text-xs text-center text-slate-500 dark:text-slate-400">
+                            This site is protected by reCAPTCHA and the
+                            <a href="https://policies.google.com/privacy" target="_blank" class="underline hover:text-green-600">Privacy Policy</a>
+                            and
+                            <a href="https://policies.google.com/terms" target="_blank" class="underline hover:text-green-600">Terms of Service</a>
+                            apply.
+                        </p>
                     </form>
                 </div>
             </div>

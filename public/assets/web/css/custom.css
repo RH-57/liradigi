@@ -28,4 +28,15 @@ nav a.active span {
   width: 100% !important;
 }
 
+.grecaptcha-badge {
+  width: 70px !important;
+  overflow: hidden !important;
+  transition: width 0.3s ease-in-out;
+}
+
+.grecaptcha-badge:hover {
+  width: 256px !important;
+}
+
+
 
