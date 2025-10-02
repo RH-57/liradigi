@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
-  <title>{{$project->name}} - LIRADIGI. | Portfolio Project</title>
+  <title>{{$project->name}} - LIRADIGI | Portfolio Project</title>
 
   <meta name="title" content="{{$project->meta_title}}">
   <meta name="description" content="{{$project->meta_description}}">

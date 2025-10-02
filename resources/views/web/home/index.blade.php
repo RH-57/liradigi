@@ -445,15 +445,17 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/{{$contacts->phone}}?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
-        target="_blank"
-        class="group fixed buttom-20 right-1 z-50 w-16 h-16 rounded-full
-                bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400
-                flex items-center justify-center text-white text-3xl shadow-lg
-                hover:scale-110 hover:shadow-2xl transition-all duration-300">
+    target="_blank"
+    class="group fixed top-1/2 right-4 -translate-y-1/2 z-50 w-16 h-16 rounded-full
+            bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400
+            flex items-center justify-center text-white text-3xl shadow-lg
+            hover:scale-110 hover:shadow-2xl transition-all duration-300
+            block lg:hidden">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+
 
 
 
