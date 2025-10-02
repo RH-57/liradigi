@@ -29,13 +29,18 @@ nav a.active span {
 }
 
 .grecaptcha-badge {
-  width: 70px !important;
+  position: fixed !important;
+  bottom: 14px !important;
+  left: 14px !important;   /* pindah ke kiri bawah */
+  right: auto !important;  /* pastikan tidak nempel kanan */
+  z-index: 9999;
+  width: 60px !important;    /* kecilkan logo */
   overflow: hidden !important;
   transition: width 0.3s ease-in-out;
 }
 
 .grecaptcha-badge:hover {
-  width: 256px !important;
+  width: 256px !important;   /* tampil penuh saat dihover */
 }
 
 
