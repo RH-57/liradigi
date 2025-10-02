@@ -35,7 +35,7 @@
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="{{route('projects')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Projects
+                <a href="{{route('project')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Projects
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
@@ -47,7 +47,7 @@
                         transition-all duration-200 group-hover:w-full">
                     </span>
                 </a>
-                <a href="{{route('home')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
+                <a href="{{route('posts')}}" class="text-lg font-bold relative text-slate-600 dark:text-slate-300 hover:text-sage-700 dark:hover:text-green-300 font-bold transition group">Articles
                      <span class="absolute left-0 -bottom-1 w-0 h-[2px]
                         bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400
                         transition-all duration-200 group-hover:w-full">
@@ -84,7 +84,7 @@
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Services</a>
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Projects</a>
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Testimonials</a>
-                <a href="#blogs" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
+                <a href="{{route('posts')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Articles</a>
                 <a href="{{route('home')}}" class="text-slate-700 dark:text-slate-200 font-medium py-2">Contact</a>
             </div>
         </div>
