@@ -49,22 +49,41 @@
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Nama</label>
-                            <input type="text" name="name" class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" required>
+                                <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Nama</label>
+                                <input id="name" type="text" name="name"
+                                    class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70
+                                        border border-slate-300 dark:border-slate-700
+                                        focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+                                        outline-none transition" required>
                             </div>
                             <div>
-                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
-                            <input type="text" name="email" class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" required>
+                                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
+                                <input id="email" type="email" name="email"
+                                    class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70
+                                        border border-slate-300 dark:border-slate-700
+                                        focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+                                        outline-none transition" required>
                             </div>
                         </div>
+
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Subjek</label>
-                            <input type="text" name="subject" class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" required>
+                            <label for="subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Subjek</label>
+                            <input id="subject" type="text" name="subject"
+                                class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70
+                                    border border-slate-300 dark:border-slate-700
+                                    focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+                                    outline-none transition" required>
                         </div>
+
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Pesan</label>
-                            <textarea name="message" rows="5" class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70 border border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition" required></textarea>
+                            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Pesan</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="mt-2 w-full px-4 py-3 rounded-lg bg-white/70 dark:bg-slate-800/70
+                                    border border-slate-300 dark:border-slate-700
+                                    focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500
+                                    outline-none transition" required></textarea>
                         </div>
+
 
                         <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 

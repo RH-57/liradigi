@@ -183,7 +183,7 @@
                     </p>
                     <div class="flex gap-2 mt-6">
                         @foreach($medsos as $media)
-                        <a href="{{$media->url}}" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+                        <a aria-label="{{$media->name}}" href="{{$media->url}}" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
                             <i class="fab {{$media->icon}}"></i>
                         </a>
                         @endforeach

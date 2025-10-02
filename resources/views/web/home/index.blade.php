@@ -340,9 +340,9 @@
                                     class="w-20 h-20 rounded-full mx-auto shadow-lg object-cover">
 
                                 <!-- Nama & posisi -->
-                                <h4 class="mt-4 font-bold text-slate-900 dark:text-white">
+                                <h3 class="mt-4 font-bold text-slate-900 dark:text-white">
                                     {{ $testimonial->name }}
-                                </h4>
+                                </h3>
                                 <p class="text-sm text-slate-600 dark:text-slate-400">
                                     {{ $testimonial->position }}
                                 </p>
@@ -400,7 +400,7 @@
                     </p>
                     <div class="flex gap-2 mt-6">
                         @foreach($medsos as $media)
-                        <a href="{{$media->url}}" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+                        <a aria-label="{{$media->name}}" href="{{$media->url}}" target="_blank" class="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
                             <i class="fab {{$media->icon}}"></i>
                         </a>
                         @endforeach
