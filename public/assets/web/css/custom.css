@@ -29,7 +29,11 @@ nav a.active span {
 }
 
 .grecaptcha-badge {
-  visibility: hidden;
+  position: fixed !important;
+  bottom: 14px !important;
+  left: 14px !important;   /* pindah kiri bawah */
+  right: auto !important;  /* override default */
+  z-index: 9999 !important;
 }
 
 .grecaptcha-badge:hover {

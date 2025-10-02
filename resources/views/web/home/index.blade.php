@@ -459,14 +459,26 @@
 
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
     <script>
-    grecaptcha.ready(function () {
-        grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", { action: "contact" })
-            .then(function (token) {
-                document.getElementById("g-recaptcha-response").value = token;
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            grecaptcha.ready(function() {
+                grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", {action: 'submit'})
+                    .then(function(token) {
+                        // isi token ke hidden input
+                        document.getElementById('g-recaptcha-response').value = token;
+                        // tunggu sedikit agar terisi
+                        setTimeout(() => {
+                            form.submit();
+                        }, 200);
+                    });
             });
+        });
     });
     </script>
-
     <script src="{{asset('assets/web/js/app.js')}}"></script>
   </body>
 </html>
