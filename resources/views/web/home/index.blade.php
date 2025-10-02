@@ -297,9 +297,12 @@
 
             <!-- CTA Button -->
             <div class="mt-12 text-center">
-            <a href="{{route('project')}}" class="px-6 py-3 rounded-lg bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transform transition">
-                Lihat Semua Project
-            </a>
+            <a href="{{route('project')}}"
+                        class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700
+                         text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-100
+                          dark:hover:bg-slate-800 transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
+                    Lihat Semua Project
+                    </a>
             </div>
         </div>
     </section>

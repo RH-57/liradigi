@@ -63,12 +63,35 @@
 
 
             <div class="flex items-center gap-3">
-                <!-- Get Started button (desktop only) -->
-                <a href="https://wa.me/{{$contacts->phone}}?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank" class="hidden lg:inline-block px-5 py-2 rounded-lg bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white text-xl font-semibold shadow-md hover:shadow-lg hover:scale-105 transform transition">
+                <a href="#get-started"
+                    class="hidden md:flex group relative items-center justify-center px-6 py-3 rounded-lg
+                        bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
+                        text-white text-xl font-semibold shadow-md overflow-hidden
+                        transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
 
+                    <!-- Teks -->
+                    <span
+                    class="transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
                     Konsultasi Gratis
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </span>
+
+                    <!-- Icon WhatsApp -->
+                    <i
+                    class="fa-brands fa-whatsapp text-4xl absolute opacity-0 translate-x-full
+                            transition-all duration-500 ease-in-out
+                            group-hover:translate-x-0 group-hover:opacity-100
+                            group-hover:text-white">
+                    </i>
+
+                    <!-- Efek sinar -->
+                    <span
+                    class="absolute inset-0 bg-white rounded-lg opacity-0 scale-0
+                            group-hover:opacity-30 group-hover:scale-150 blur-2xl
+                            transition-all duration-700 ease-out">
+                    </span>
                 </a>
+                </div>
+
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
