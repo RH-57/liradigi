@@ -6,8 +6,8 @@
   <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">
-  <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}" media="print" onload="this.media='all'">
 </head>
 <body class="overflow-x-hidden">
 
@@ -216,7 +216,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}" async></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');
@@ -238,7 +238,6 @@
         });
     });
     </script>
-    <script src="{{asset('assets/web/js/app.js')}}"></script>
-  <script src="{{asset('assets/web/js/app.js')}}"></script>
+    <script src="{{asset('assets/web/js/app.js')}}" defer></script>
 </body>
 </html>
