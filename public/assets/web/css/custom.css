@@ -31,12 +31,9 @@ nav a.active span {
 .grecaptcha-badge {
   position: fixed !important;
   bottom: 14px !important;
-  left: 14px !important;   /* pindah ke kiri bawah */
-  right: auto !important;  /* pastikan tidak nempel kanan */
-  z-index: 9999;
-  width: 60px !important;    /* kecilkan logo */
-  overflow: hidden !important;
-  transition: width 0.3s ease-in-out;
+  left: 14px !important;   /* pindah kiri bawah */
+  right: auto !important;  /* override default */
+  z-index: 9999 !important;
 }
 
 .grecaptcha-badge:hover {
