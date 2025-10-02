@@ -28,10 +28,18 @@
   <meta name="twitter:image" content="{{ asset('storage/' . $project->images->first()->image) }}">
   @endif
 
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">
-  <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}">
+  <link rel="preload" href="{{asset('assets/web/css/output.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{asset('assets/web/css/custom.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}">
+    </noscript>
 </head>
 <body class="overflow-x-hidden">
 
