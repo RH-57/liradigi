@@ -45,7 +45,7 @@
 
                 <!-- Right Form -->
                 <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl">
-                    <form action="{{route('message.store')}}" method="POST" class="space-y-6">
+                    <form id="contactForm" action="{{route('message.store')}}" method="POST" class="space-y-6">
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>

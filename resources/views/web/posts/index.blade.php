@@ -207,6 +207,19 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+    <script>
+    grecaptcha.ready(function() {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", {action: 'submit'}).then(function(token) {
+                document.getElementById('g-recaptcha-response').value = token;
+                event.target.submit();
+            });
+        });
+    });
+    </script>
+    <script src="{{asset('assets/web/js/app.js')}}"></script>
   <script src="{{asset('assets/web/js/app.js')}}"></script>
 </body>
 </html>
