@@ -12,17 +12,8 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-    <!-- Preconnect -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-
-    <!-- Ganti link CSS biasa dengan ini -->
-    <link rel="preload" href="{{asset('assets/web/css/output.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="{{asset('assets/web/css/custom.css')}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}">
-    </noscript>
+    <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}">
   </head>
   <body class="overflow-x-hidden">
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md">
@@ -464,7 +455,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');
@@ -486,6 +477,6 @@
         });
     });
     </script>
-    <script src="{{asset('assets/web/js/app.js')}}" defer></script>
+    <script src="{{asset('assets/web/js/app.js')}}"></script>
   </body>
 </html>
