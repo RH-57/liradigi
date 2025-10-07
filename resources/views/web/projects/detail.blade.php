@@ -239,12 +239,11 @@
                                 opacity-0 group-hover:opacity-100 transition">
 
                         <div class="absolute bottom-6 left-6 right-6 text-white">
-                            <h3 class="text-xl font-bold">{{ $rel->name }}</h3>
-                            <p class="text-sm text-slate-200 line-clamp-3">{!! Purify::clean($rel->description) !!}</p>
-                            <a href="{{ route('project.show', $rel->slug) }}"
-                            class="mt-3 inline-block px-4 py-2 rounded-md bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
-                                    text-white font-semibold shadow hover:shadow-lg hover:scale-105 transition">
-                                Lihat Detail
+                            <h3 class="text-xl font-bold">{{$project->name}}</h3>
+                            <p class="text-sm text-slate-200 line-clamp-3">{!! Str::limit(strip_tags(Purify::clean($project->description)), 120) !!}</p>
+                            <a href="{{route('project.show', $project->slug)}}"
+                            class="mt-3 inline-block px-4 py-2 rounded-md bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 text-white font-semibold shadow hover:shadow-lg hover:scale-105 transition">
+                            Lihat Detail
                             </a>
                         </div>
                     </div>
