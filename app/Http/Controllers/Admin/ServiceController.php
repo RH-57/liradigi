@@ -97,7 +97,6 @@ class ServiceController extends Controller
 
         $request->validate([
             'title'             => 'required|string|max:255',
-            'slug'              => 'nullable|string|max:255|unique:services,slug,' . $service->id,
             'short_description' => 'required|string',
             'description'       => 'required|string',
             'icon'              => 'nullable|string|max:50',
