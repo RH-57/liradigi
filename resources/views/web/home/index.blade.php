@@ -351,7 +351,7 @@
             <!-- Title -->
             <div class="text-center">
                 <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">
-                    Frequently <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Asked Questions</span>
+                    <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">FAQs</span>
                 </h2>
                 <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
                     Pertanyaan umum yang sering diajukan oleh klien kami seputar layanan dan proses kerja.
