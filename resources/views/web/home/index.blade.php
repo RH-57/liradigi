@@ -520,7 +520,7 @@
     </footer>
 
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
-
+    <script src="{{asset('assets/web/js/app.js')}}"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');
@@ -542,6 +542,5 @@
         });
     });
     </script>
-    <script src="{{asset('assets/web/js/app.js')}}"></script>
   </body>
 </html>
