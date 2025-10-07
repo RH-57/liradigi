@@ -41,6 +41,12 @@
         <ul id="page-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
             <li class="nav-item">
+                <a class="nav-link collapsed" href="{{route('faqs.index')}}">
+                    <i class="bi bi-circle"></i>
+                    <span>Faqs</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="{{route('projects.index')}}">
                     <i class="bi bi-circle"></i>
                     <span>Projects</span>

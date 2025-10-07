@@ -294,7 +294,7 @@
             <!-- Section Title -->
             <div class="text-center">
                 <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">
-                    Our <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Projects</span>
+                    <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Project</span> Kami
                 </h2>
                 <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
                     Beberapa karya terbaik yang telah kami buat untuk klien kami.
@@ -335,6 +335,45 @@
                           dark:hover:bg-slate-800 transition-all duration-300 ease-in-out group-hover:-translate-x-full group-hover:opacity-0">
                     Lihat Semua Project
                     </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="relative py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 overflow-hidden">
+        <!-- Decorative gradient blob -->
+        <div class="absolute -top-20 left-1/2 -translate-x-1/2
+                    w-[25rem] h-[15rem] sm:w-[35rem] sm:h-[20rem] lg:w-[45rem] lg:h-[25rem]
+                    bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400
+                    rounded-full blur-3xl opacity-10"></div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">
+                    Frequently <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">Asked Questions</span>
+                </h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                    Pertanyaan umum yang sering diajukan oleh klien kami seputar layanan dan proses kerja.
+                </p>
+            </div>
+
+            <!-- Accordion -->
+            <div class="mt-12 space-y-1">
+            @foreach ($faqs as $faq)
+                <div class="faq-item border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all">
+                    <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-slate-900 dark:text-white focus:outline-none group"
+                        onclick="toggleFAQ(this)">
+                        <span>{{ $faq->question }}</span>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-5 text-slate-600 dark:text-slate-300">
+                        <div class="pb-5 prose prose-slate dark:prose-invert max-w-none">
+                            {!! $faq->answer !!}
+                        </div>
+                    </div>
+                </div>
+            @endforeach
             </div>
         </div>
     </section>
@@ -481,6 +520,7 @@
     </footer>
 
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');

@@ -40,5 +40,24 @@ nav a.active span {
   width: 256px !important;   /* tampil penuh saat dihover */
 }
 
-
-
+.faq-item {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+}
+.faq-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.25); /* hijau lembut */
+  background-color: rgba(16, 185, 129, 0.05);
+}
+.faq-item.active {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(16, 185, 129, 0.35);
+  background-color: rgba(16, 185, 129, 0.08);
+}
+.dark .faq-item:hover {
+  box-shadow: 0 0 25px rgba(52, 211, 153, 0.25);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+.dark .faq-item.active {
+  box-shadow: 0 0 35px rgba(52, 211, 153, 0.4);
+  background-color: rgba(16, 185, 129, 0.15);
+}

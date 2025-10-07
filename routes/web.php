@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MediaSocialController;
 use App\Http\Controllers\Admin\PostCategoryController;
 use App\Http\Controllers\Admin\PostController;
@@ -42,5 +43,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     });
     Route::resource('/posts', PostController::class);
     Route::post('/posts/upload-image', [PostController::class, 'uploadImage'])->name('posts.uploadImage');
+    Route::resource('/faqs', FaqController::class);
 
 });
