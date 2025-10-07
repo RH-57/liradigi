@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
+  <link rel="icon" href="{{ asset('assets/web/img/favicon.ico') }}" type="image/png">
   <title>{{$post->title}} - LIRADIGI.</title>
 
   <meta name="title" content="{{$post->meta_title}}">

@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
+  <link rel="icon" href="{{ asset('assets/web/img/favicon.ico') }}" type="image/png">
+
+  <meta name="description" content="Kumpulan artikel terbaru tentang digital marketing, web development, dan teknologi bisnis dari LIRADIGI.">
+  <meta name="keywords" content="artikel digital marketing, web development, teknologi, bisnis online, liradigi">
+  <meta name="author" content="LIRADIGI">
+
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">

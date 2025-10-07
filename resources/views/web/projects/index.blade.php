@@ -3,7 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
+  <link rel="icon" href="{{ asset('assets/web/img/favicon.ico') }}" type="image/png">
+
+  <title>Project Portfolio | LIRADIGI - Partner Digital Untuk Bisnis Anda</title>
+  <meta name="description" content="Jelajahi berbagai project kreatif dari LIRADIGI. Kami membantu bisnis dan brand Anda tumbuh dengan solusi digital modern, desain elegan, dan strategi tepat sasaran.">
+  <meta name="keywords" content="LIRADIGI, project digital, jasa pembuatan website, branding, digital marketing, desain, teknologi bisnis">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="LIRADIGI - Lintas Arah Digital">
+
+   <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Project Portfolio | LIRADIGI - Partner Digital Untuk Bisnis Anda">
+  <meta property="og:description" content="Jelajahi karya digital terbaik dari LIRADIGI untuk berbagai bisnis dan brand.">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:site_name" content="LIRADIGI">
+  <meta property="og:image" content="{{ asset('assets/web/img/hero.png') }}">
+  <meta property="og:image:alt" content="Project Portfolio LIRADIGI">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Project Portfolio | LIRADIGI - Partner Digital Untuk Bisnis Anda">
+  <meta name="twitter:description" content="Lihat koleksi project terbaik LIRADIGI yang telah membantu banyak brand tumbuh secara digital.">
+  <meta name="twitter:image" content="{{ asset('assets/web/img/hero.png') }}">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">

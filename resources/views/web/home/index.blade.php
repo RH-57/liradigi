@@ -3,17 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="{{ asset('assets/web/img/logo.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('assets/web/img/favicon.ico') }}" type="image/png">
 
     <title>LIRADIGI | Partner Digital Untuk Bisnis Anda</title>
     <meta name="description" content="Kami membantu brand dan bisnis Anda tumbuh dengan teknologi digital, desain modern, dan strategi tepat sasaran.">
     <meta name="keywords" content="digital marketing, jasa website, branding, teknologi, SEO, desain grafis, aplikasi web">
+    <meta name="keywords" content="digital marketing, jasa pembuatan website, branding, teknologi digital, SEO, desain grafis, pengembangan aplikasi, LIRADIGI, agency digital Indonesia, jasa digital marketing Jakarta, web development">
+    <meta name="author" content="LIRADIGI - Lintas Arah Digital">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ url()->current() }}">
+
+     <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LIRADIGI | Partner Digital Untuk Bisnis Anda">
+    <meta property="og:description" content="Kami membantu brand dan bisnis Anda tumbuh dengan teknologi digital, desain modern, dan strategi tepat sasaran.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:site_name" content="LIRADIGI">
+    <meta property="og:image" content="{{ asset('assets/web/img/hero.png') }}">
+    <meta property="og:image:alt" content="LIRADIGI - Partner Digital Untuk Bisnis Anda">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LIRADIGI | Partner Digital Untuk Bisnis Anda">
+    <meta name="twitter:description" content="Kami membantu brand dan bisnis Anda tumbuh dengan teknologi digital, desain modern, dan strategi tepat sasaran.">
+    <meta name="twitter:image" content="{{ asset('assets/web/img/hero.png') }}">
+    <meta name="twitter:creator" content="@liradigi">
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset('assets/web/css/output.css')}}">
     <link rel="stylesheet" href="{{asset('assets/web/css/custom.css')}}">
+
+    <!-- Performance & SEO -->
+    <meta name="theme-color" content="#10b981">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   </head>
   <body class="overflow-x-hidden">
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md">
