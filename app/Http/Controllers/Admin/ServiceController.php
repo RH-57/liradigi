@@ -41,7 +41,14 @@ class ServiceController extends Controller
             'canonical_url'     => 'nullable|url|max:255',
         ]);
 
-        $slug = $request->slug ? Str::slug($request->slug) : Str::slug($request->title);
+        $baseSlug = Str::slug($request->title);
+        $slug = $baseSlug;
+        $counter = 1;
+
+        while (Service::where('slug', $slug)->exists()) {
+            $slug = "{$baseSlug}-{$counter}";
+            $counter++;
+        }
 
         $imagePath = null;
         if ($request->hasFile('image')) {
@@ -53,7 +60,7 @@ class ServiceController extends Controller
             $metaImagePath = $request->file('meta_image')->store('services/meta', 'public');
         }
 
-        $canonicalUrl = $request->canonical_url ? $request->canonical_url : url('services', $slug);
+        $canonicalUrl = url("services/{$slug}");
 
         Service::create([
             'title'             => $request->title,
@@ -103,9 +110,14 @@ class ServiceController extends Controller
             'canonical_url'     => 'nullable|url|max:255',
         ]);
 
-        $slugNew = $request->slug ? Str::slug($request->slug) : Str::slug($request->title);
-        if (Service::where('slug', $slugNew)->where('id', '!=', $service->id)->exists()) {
-            $slugNew .= '-' . time();
+        $baseSlug = Str::slug($request->title);
+        $slugNew = $baseSlug;
+        $counter = 1;
+
+        // Hindari duplikasi slug dengan service lain
+        while (Service::where('slug', $slugNew)->where('id', '!=', $service->id)->exists()) {
+            $slugNew = "{$baseSlug}-{$counter}";
+            $counter++;
         }
 
         // Update image jika ada upload baru
@@ -120,7 +132,7 @@ class ServiceController extends Controller
             $metaImagePath = $request->file('meta_image')->store('services/meta', 'public');
         }
 
-        $canonicalUrl = $request->canonical_url ? $request->canonical_url : url('services', $slug);
+         $canonicalUrl = url("services/{$slugNew}");
 
         $service->update([
             'title'             => $request->title,
