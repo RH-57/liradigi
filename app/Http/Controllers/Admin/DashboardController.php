@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\DB;
 class DashboardController
 {
     public function index() {
+        $projects = Project::withoutTrashed()->count();
+        $posts = Post::withoutTrashed()->count();
         $todayVisitors = Visitor::whereDate('visit_date', Carbon::today())->count();
         $todayMessages = Message::whereDate('created_at', Carbon::today())->count();
 
@@ -36,7 +38,9 @@ class DashboardController
             'todayVisitors',
             'todayMessages',
             'dates',
-            'totals'
+            'totals',
+            'projects',
+            'posts',
         ));
     }
 }

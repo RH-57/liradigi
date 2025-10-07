@@ -67,7 +67,7 @@
                       <i class="bi bi-check"></i>
                     </div>
                     <div class="ps-3">
-                      <h6></h6>
+                      <h6>{{$projects}}</h6>
                       <span class="text-muted small pt-2 ps-1">Done</span>
 
                     </div>
@@ -89,7 +89,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6></h6>
+                      <h6>{{$posts}}</h6>
                       <span class="text-muted small pt-2 ps-1">Article & News</span>
 
                     </div>
