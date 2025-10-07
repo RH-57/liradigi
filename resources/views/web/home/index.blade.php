@@ -522,6 +522,36 @@
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
     <script src="{{asset('assets/web/js/app.js')}}"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        window.toggleFAQ = (button) => {
+            const content = button.nextElementSibling;
+            const parentItem = button.closest('.faq-item');
+            const icon = button.querySelector('i');
+
+            // Tutup semua item lain
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== parentItem) {
+                    item.classList.remove('active');
+                    const inner = item.querySelector('div.max-h-0, div[style]');
+                    if (inner) inner.style.maxHeight = null;
+                    const iconEl = item.querySelector('i');
+                    if (iconEl) iconEl.classList.remove('rotate-180');
+                }
+            });
+
+            // Toggle item yang diklik
+            const isActive = parentItem.classList.toggle('active');
+            if (isActive) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.add('rotate-180');
+            } else {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            }
+        };
+    });
+    </script>
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');
         if (!form) return;
