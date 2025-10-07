@@ -96,7 +96,7 @@
                                         <a href="{{route('testimonials.edit', $testimonial->id)}}" class="btn btn-sm btn-info">
                                             <i class="bi bi-eye"></i>
                                         </a>
-                                        <form action="" method="POST" style="display:inline;">
+                                        <form action="{{route('testimonials.destroy', $testimonial->id)}}" method="POST" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this service?')">

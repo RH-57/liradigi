@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Storage;
 class TestimonialController extends Controller
 {
      private function clearCache() {
-         $page = request('page', 1);
-        Cache::forget('testimonials_page_{$page}');
+        $page = request('page', 1);
+        Cache::forget("testimonials_page_{$page}");
     }
 
     public function index()
