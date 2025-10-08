@@ -97,7 +97,7 @@
 
 
             <div class="flex items-center gap-3">
-                <a href="#get-started"
+                <a href="https://wa.me/{{$contacts->phone}}?text=Hallo%20saya%20tertarik%20dengan%20layanan%20anda" target="_blank"
                     class="hidden md:flex group relative items-center justify-center px-6 py-3 rounded-lg
                         bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
                         text-white text-xl font-semibold shadow-md overflow-hidden
@@ -162,7 +162,7 @@
                     Kami menyediakan layanan Pembuatan Website untuk bisnis anda dan membantu bisnis Anda tumbuh dengan teknologi digital terbaru, desain modern, aman, dan strategi tepat sasaran.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#get-started"
+                    <a href="https://wa.me/{{$contacts->phone}}?text=Hallo%20saya%20tertarik%20dengan%20layanan%20anda" target="_blank"
                     class="group relative flex items-center justify-center px-6 py-3 rounded-lg
                         bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
                         text-white text-xl font-semibold shadow-md overflow-hidden
@@ -252,7 +252,7 @@
 
             </div>
             <div class="mt-16 flex flex-col sm:flex-row gap-4 justify-center lg:justify-center">
-                <a href="#get-started"
+                <a href="https://wa.me/{{$contacts->phone}}?text=Hallo%20saya%20tertarik%20dengan%20layanan%20anda" target="_blank"
                     class="group relative flex items-center justify-center px-6 py-3 rounded-lg
                         bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400
                         text-white text-xl font-semibold shadow-md overflow-hidden
