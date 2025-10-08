@@ -34,6 +34,7 @@ nav a.active span {
   left: 14px !important;   /* pindah kiri bawah */
   right: auto !important;  /* override default */
   z-index: 9999 !important;
+  visibility: hidden !important;
 }
 
 .grecaptcha-badge:hover {
