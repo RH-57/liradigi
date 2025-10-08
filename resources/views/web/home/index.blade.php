@@ -360,21 +360,24 @@
 
             <!-- Accordion -->
             <div class="mt-12 space-y-1">
-            @foreach ($faqs as $faq)
-                <div class="faq-item border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all">
-                    <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-slate-900 dark:text-white focus:outline-none group"
-                        onclick="toggleFAQ(this)">
-                        <span>{{ $faq->question }}</span>
-                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300"></i>
-                    </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-5 text-slate-600 dark:text-slate-300">
-                        <div class="pb-5 prose prose-slate dark:prose-invert max-w-none">
-                            {!! $faq->answer !!}
+                @foreach ($faqs as $faq)
+                    <div class="faq-item border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all" data-open="false">
+                        <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-slate-900 dark:text-white focus:outline-none group"
+                            onclick="toggleFAQ(this)">
+                            <span>{{ $faq->question }}</span>
+                            <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300"></i>
+                        </button>
+
+                        <!-- tambahkan class faq-content di sini -->
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-5 text-slate-600 dark:text-slate-300">
+                            <div class="pb-5 prose prose-slate dark:prose-invert max-w-none">
+                                {!! $faq->answer !!}
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
             </div>
+
         </div>
     </section>
 
@@ -522,35 +525,36 @@
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
     <script src="{{asset('assets/web/js/app.js')}}"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        window.toggleFAQ = (button) => {
-            const content = button.nextElementSibling;
-            const parentItem = button.closest('.faq-item');
-            const icon = button.querySelector('i');
+document.addEventListener('DOMContentLoaded', () => {
+    window.toggleFAQ = (button) => {
+        const parentItem = button.closest('.faq-item');
+        const content = parentItem.querySelector('.faq-content');
+        const icon = button.querySelector('i');
 
-            // Tutup semua item lain
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== parentItem) {
-                    item.classList.remove('active');
-                    const inner = item.querySelector('div.max-h-0, div[style]');
-                    if (inner) inner.style.maxHeight = null;
-                    const iconEl = item.querySelector('i');
-                    if (iconEl) iconEl.classList.remove('rotate-180');
-                }
-            });
-
-            // Toggle item yang diklik
-            const isActive = parentItem.classList.toggle('active');
-            if (isActive) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                icon.classList.add('rotate-180');
-            } else {
-                content.style.maxHeight = null;
-                icon.classList.remove('rotate-180');
+        // Tutup semua item lain
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== parentItem) {
+                item.classList.remove('active');
+                const inner = item.querySelector('.faq-content');
+                const iconEl = item.querySelector('i');
+                if (inner) inner.style.maxHeight = null;
+                if (iconEl) iconEl.classList.remove('rotate-180');
             }
-        };
-    });
-    </script>
+        });
+
+        // Toggle item yang diklik
+        const isActive = parentItem.classList.toggle('active');
+        if (isActive) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.classList.add('rotate-180');
+        } else {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+        }
+    };
+});
+</script>
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('contactForm');
