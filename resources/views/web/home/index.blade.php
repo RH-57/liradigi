@@ -340,43 +340,28 @@
     </section>
 
     <!-- FAQ SECTION -->
-    <section id="faq" class="relative py-24 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 overflow-hidden">
-        <!-- Decorative gradient blob -->
-        <div class="absolute -top-20 left-1/2 -translate-x-1/2
-                    w-[25rem] h-[15rem] sm:w-[35rem] sm:h-[20rem] lg:w-[45rem] lg:h-[25rem]
-                    bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400
-                    rounded-full blur-3xl opacity-10"></div>
+    <section id="faqs" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="container mx-auto px-5 max-w-3xl">
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white text-center mb-10">
+            Pertanyaan yang Sering Diajukan
+            </h2>
 
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <!-- Title -->
-            <div class="text-center">
-                <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">
-                    <span class="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-400 bg-clip-text text-transparent">FAQs</span>
-                </h2>
-                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
-                    Pertanyaan umum yang sering diajukan oleh klien kami seputar layanan dan proses kerja.
-                </p>
-            </div>
-
-            <!-- Accordion -->
-            <div class="mt-12 space-y-1">
+            <div class="faq-list space-y-4">
             @foreach ($faqs as $faq)
-                <div class="faq-item border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all">
-                    <button class="w-full flex justify-between items-center p-5 text-left font-semibold text-slate-900 dark:text-white focus:outline-none group"
-                        onclick="toggleFAQ(this)">
-                        <span>{{ $faq->question }}</span>
-                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform duration-300"></i>
-                    </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-5 text-slate-600 dark:text-slate-300">
-                        <div class="pb-5 prose prose-slate dark:prose-invert max-w-none">
-                            {!! $faq->answer !!}
-                        </div>
-                    </div>
+                <div class="faq-card" data-open="false">
+                <button class="faq-header" onclick="toggleFAQ(this)">
+                    <span class="faq-question">{{ $faq->question }}</span>
+                    <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-body">
+                    <p>{!! $faq->answer !!}</p>
+                </div>
                 </div>
             @endforeach
             </div>
         </div>
-    </section>
+        </section>
+
 
     <!-- TESTIMONIALS SECTION -->
     <section id="testimonials" class="relative py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 overflow-hidden">
@@ -522,34 +507,22 @@
     <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
     <script src="{{asset('assets/web/js/app.js')}}"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+       document.addEventListener('DOMContentLoaded', () => {
         window.toggleFAQ = (button) => {
-            const content = button.nextElementSibling;
-            const parentItem = button.closest('.faq-item');
-            const icon = button.querySelector('i');
+            const card = button.closest('.faq-card');
+            const isOpen = card.classList.contains('active');
 
-            // Tutup semua item lain
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== parentItem) {
-                    item.classList.remove('active');
-                    const inner = item.querySelector('div.max-h-0, div[style]');
-                    if (inner) inner.style.maxHeight = null;
-                    const iconEl = item.querySelector('i');
-                    if (iconEl) iconEl.classList.remove('rotate-180');
-                }
+            // Tutup semua
+            document.querySelectorAll('.faq-card.active').forEach((openCard) => {
+            openCard.classList.remove('active');
             });
 
-            // Toggle item yang diklik
-            const isActive = parentItem.classList.toggle('active');
-            if (isActive) {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                icon.classList.add('rotate-180');
-            } else {
-                content.style.maxHeight = null;
-                icon.classList.remove('rotate-180');
+            // Jika belum terbuka, buka yang diklik
+            if (!isOpen) {
+            card.classList.add('active');
             }
         };
-    });
+        });
     </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
