@@ -26,6 +26,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->use([
             TrackVisitor::class,
         ]);
+        $middleware->web(append: [
+            \Spatie\Honeypot\ProtectAgainstSpam::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
 

@@ -28,19 +28,6 @@ nav a.active span {
   width: 100% !important;
 }
 
-.grecaptcha-badge {
-  position: fixed !important;
-  bottom: 14px !important;
-  left: 14px !important;   /* pindah kiri bawah */
-  right: auto !important;  /* override default */
-  z-index: 9999 !important;
-  visibility: hidden !important;
-}
-
-.grecaptcha-badge:hover {
-  width: 256px !important;   /* tampil penuh saat dihover */
-}
-
 .faq-item {
   transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
 }

@@ -17,21 +17,7 @@ class MessageController extends Controller
             'email'     => 'required|email',
             'subject'   => 'required|string|max:255',
             'message'   => 'required|string',
-            'g-recaptcha-response' => 'required',
         ]);
-
-        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret'   => config('services.recaptcha.secret_key'),
-            'response' => $request->input('g-recaptcha-response'),
-            'remoteip' => $request->ip(),
-        ]);
-
-        $result = $response->json();
-
-
-        if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
-            return back()->withErrors(['g-recaptcha-response' => 'Verifikasi reCAPTCHA gagal, coba lagi.'])->withInput();
-        }
 
         Message::create([
             'name'      => $request->name,
