@@ -50,4 +50,43 @@ nav a.active span {
   background-color: rgba(16, 185, 129, 0.15);
 }
 
+/* --- Container --- */
+.whatsapp-btn {
+  position: fixed;
+  overflow: visible;
+}
+
+/* --- Efek Gelombang --- */
+.whatsapp-btn .wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 211, 102, 0.4);
+  border-radius: 50%;
+  z-index: 10;
+  transform: scale(1);
+  opacity: 0.6;
+  animation: wave 2s infinite ease-out;
+}
+
+.whatsapp-btn .wave2 {
+  animation-delay: 1s;
+}
+
+/* --- Animasi Wave --- */
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.7); /* 🔹 sebelumnya 2.5, sekarang lebih kecil */
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 

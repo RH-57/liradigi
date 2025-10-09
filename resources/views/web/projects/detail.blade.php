@@ -268,9 +268,10 @@
                 <!-- Brand -->
                 <div>
                     <a href="#" class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400 flex items-center justify-center shadow-md">
-                        <span class="text-white font-extrabold text-2xl">LD</span>
-                    </div>
+                    <img src="{{ asset('assets/web/img/logo.png') }}"
+                            alt="Logo"
+                            class="w-10 h-10 object-contain"
+                            loading="lazy">
                     <span class="text-2xl font-extrabold text-slate-800 dark:text-slate-100">LIRADIGI.</span>
                     </a>
                     <p class="mt-4 text-slate-600 text-sm">
@@ -326,7 +327,7 @@
         </div>
     </footer>
 
-
+    @include('web.components.whatsapp')
   <script src="{{asset('assets/web/js/app.js')}}"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {

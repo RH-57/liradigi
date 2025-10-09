@@ -167,9 +167,10 @@
                 <!-- Brand -->
                 <div>
                     <a href="#" class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-green-600 via-emerald-500 to-teal-400 flex items-center justify-center shadow-md">
-                        <span class="text-white font-extrabold text-2xl">LD</span>
-                    </div>
+                    <img src="{{ asset('assets/web/img/logo.png') }}"
+                            alt="Logo"
+                            class="w-10 h-10 object-contain"
+                            loading="lazy">
                     <span class="text-2xl font-extrabold text-slate-800 dark:text-slate-100">LIRADIGI.</span>
                     </a>
                     <p class="mt-4 text-slate-600 text-sm">
@@ -225,28 +226,8 @@
         </div>
     </footer>
 
-    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}" async></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('contactForm');
-        if (!form) return;
+    @include('web.components.whatsapp')
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            grecaptcha.ready(function() {
-                grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", {action: 'submit'})
-                    .then(function(token) {
-                        // isi token ke hidden input
-                        document.getElementById('g-recaptcha-response').value = token;
-                        // tunggu sedikit agar terisi
-                        setTimeout(() => {
-                            form.submit();
-                        }, 200);
-                    });
-            });
-        });
-    });
-    </script>
     <script src="{{asset('assets/web/js/app.js')}}" defer></script>
 </body>
 </html>
