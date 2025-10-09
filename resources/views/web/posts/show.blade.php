@@ -192,8 +192,7 @@
             <img src="{{ asset('assets/web/img/logo.png') }}"
                             alt="Logo"
                             class="w-10 h-10 object-contain"
-                            fetchpriority="high"
-                            decoding="async">
+                            loading="lazy">
             <span class="text-2xl font-extrabold text-slate-800 dark:text-slate-100">LIRADIGI.</span>
           </a>
           <p class="mt-4 text-slate-600 text-sm">Partner Digital Untuk Bisnis Anda.</p>
